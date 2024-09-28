@@ -28,8 +28,9 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors({
-  origin: "https://travello-front.vercel.app",  // Remove the square brackets
+  origin: "*",  // Temporarily allow all origins for testing purposes
   methods: ["GET", "POST", "PATCH"],
+  allowedHeaders: ["Content-Type", "Authorization"],  // Ensure these headers are allowed
   credentials: true
 }));
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
