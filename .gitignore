@@ -1,0 +1,8 @@
+node_modules/
+.env
+.idea/
+.vscode/       # If you're using Visual Studio Code
+logs/
+*.log          # To ignore all log files
+*.sqlite       # If you're using SQLite databases
+.DS_Store      # If you're on macOS
